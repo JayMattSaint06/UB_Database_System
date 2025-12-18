@@ -2,7 +2,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String UBIT;
-    private String PersonNumber;
+    private String personNumber;
     private String major;
     private String email;
     private double balance;
@@ -12,24 +12,24 @@ public class Student {
      * @param firstName first name of the student.
      * @param lastName last name of the student
      * @param UBIT Student's ID name. email consists of UBIT + @buffalo.edu
-     * @param PersonNumber Student's 8-digit ID number.
+     * @param personNumber Student's 8-digit ID number.
      * @param major Student's major.
      */
-    public Student(String firstName, String lastName, String UBIT, String PersonNumber, String major) {
+    public Student(String firstName, String lastName, String UBIT, String personNumber, String major) {
         //if null, exception thrown, program ends.
         StudentHelper.nullChecker(firstName);
         StudentHelper.nullChecker(lastName);
         StudentHelper.nullChecker(UBIT);
-        StudentHelper.nullChecker(PersonNumber);
+        StudentHelper.nullChecker(personNumber);
 
         //if parameters don't meet requirements, exception thrown, program ends.
         StudentHelper.UBITHelper(UBIT);
-        StudentHelper.PersonNumberHelper(PersonNumber);
+        StudentHelper.personNumberHelper(personNumber);
 
         this.firstName = firstName;
         this.lastName  = lastName;
         this.UBIT = UBIT.toLowerCase();
-        this.PersonNumber = PersonNumber;
+        this.personNumber = personNumber;
         this.email = this.UBIT + "@buffalo.edu";
         if(major == null){
             this.major = "Undecided";
@@ -66,11 +66,11 @@ public class Student {
     }
 
     public String getPersonNumber() {
-        return PersonNumber;
+        return personNumber;
     }
 
     public void setPersonNumber(String personNumber) {
-        PersonNumber = personNumber;
+        this.personNumber = personNumber;
     }
 
     public String getMajor() {

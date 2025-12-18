@@ -15,14 +15,14 @@ public class StudentHelper {
         }
     }
 
-    public static void PersonNumberHelper(String PersonNumber){
-        if (!PersonNumber.startsWith("506")) {
+    public static void personNumberHelper(String personNumber){
+        if (!personNumber.startsWith("506")) {
             throw new IllegalArgumentException("Invalid Person Number: must start with '506'.");
-        }else if(PersonNumber.length() != 8) {
+        }else if(personNumber.length() != 8) {
             throw new IllegalArgumentException("Invalid Person Number: most be 8 characters long.");
         }else{
-            for(int i = 0; i < PersonNumber.length(); i++){
-                if (!Character.isDigit(PersonNumber.charAt(i))){
+            for(int i = 0; i < personNumber.length(); i++){
+                if (!Character.isDigit(personNumber.charAt(i))){
                     throw new IllegalArgumentException("Invalid Person Number: every character must be a number");
                 }
             }
