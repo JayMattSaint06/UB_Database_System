@@ -3,8 +3,7 @@ public class StudentHelper {
 
     public static void nullChecker(String argument){
         if (argument == null){
-            throw new IllegalArgumentException("no information can be null. " +
-                    "All information must have a value assigned to it before continuing this action.");
+            throw new IllegalArgumentException("the following cannot be null: first name, last name, UBIT, and Person Number.");
         }
     }
 
@@ -28,6 +27,10 @@ public class StudentHelper {
                 }
             }
         }
+    }
+
+    public static void balanceHelper(double balance){
+        balance = Math.round(balance * 100.0) / 100.0;
     }
 
 
