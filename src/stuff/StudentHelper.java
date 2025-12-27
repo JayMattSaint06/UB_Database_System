@@ -1,3 +1,4 @@
+package stuff;
 
 public class StudentHelper {
 
@@ -19,7 +20,7 @@ public class StudentHelper {
         if (!personNumber.startsWith("506")) {
             throw new IllegalArgumentException("Invalid Person Number: must start with '506'.");
         }else if(personNumber.length() != 8) {
-            throw new IllegalArgumentException("Invalid Person Number: most be 8 characters long.");
+            throw new IllegalArgumentException("Invalid Person Number: must be exactly 8 characters long.");
         }else{
             for(int i = 0; i < personNumber.length(); i++){
                 if (!Character.isDigit(personNumber.charAt(i))){
